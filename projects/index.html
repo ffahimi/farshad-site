@@ -10,12 +10,14 @@
   <link rel="canonical" href="https://farshad-site.farshad-fahimi.workers.dev/projects/" />
   <meta name="robots" content="index,follow" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Projects — Farshad Fahimi" />
   <meta property="og:description" content="Selected work: options pricing, execution infrastructure, and real-time market systems." />
   <meta property="og:url" content="https://farshad-site.farshad-fahimi.workers.dev/projects/" />
   <meta property="og:image" content="https://farshad-site.farshad-fahimi.workers.dev/assets/img/og.png" />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Projects — Farshad Fahimi" />
   <meta name="twitter:description" content="Selected work: options pricing, execution infrastructure, and real-time market systems." />
@@ -24,6 +26,7 @@
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,10 +37,14 @@
   }
   </script>
 </head>
+
 <body>
   <div class="wrap">
     <div class="nav">
-      <div class="brand"><img src="/assets/img/favicon.svg" alt="logo"/><span>FF / Quant</span></div>
+      <div class="brand">
+        <img src="/assets/img/favicon.svg" alt="logo"/>
+        <span>FF / Quant</span>
+      </div>
       <div class="links">
         <a href="/">Home</a>
         <a class="active" href="/projects/">Projects</a>
@@ -49,20 +56,148 @@
     <div class="hero">
       <div class="kicker"><span class="dot"></span> selected work</div>
       <h1>Projects</h1>
-      <h2>Add/remove cards freely — keep it tight and concrete.</h2>
+      <h2>Problem → approach → outcome. Some code is public; some is private/client work (happy to discuss).</h2>
+
+      <div class="cta">
+        <a class="btn primary" href="/contact/">Contact →</a>
+        <a class="btn" href="https://www.linkedin.com/in/fafaimi" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/ffahimi" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>SPX & Equity Options Strategy Engine</h3>
+          <p>Built an end-to-end options research + execution framework: contract selection, entry/exit, rolling logic, and risk controls.</p>
+          <p>Outcome: supported production-style iteration and live portfolio operations up to roughly $2.5M AUM (2025–2026).</p>
+          <div class="tags">
+            <span class="tag lime">spx</span><span class="tag pink">risk</span><span class="tag neon">execution</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Options Pricing + Greeks Evaluation</h3>
+          <p>Implemented pricing experiments and Greeks evaluation paths for selected contracts, including fast diagnostics and logging for validation.</p>
+          <p>Outcome: reusable pricing/Greeks utilities integrated into research loops and live monitoring logic.</p>
+          <div class="tags">
+            <span class="tag neon">pricing</span><span class="tag pink">greeks</span><span class="tag">validation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>QuantConnect / Lean Production Patterns</h3>
+          <p>Built multi-ticker Lean architectures with deterministic scheduling, warmups, parameter wiring, and QC-proof backtest logging.</p>
+          <p>Outcome: faster iteration with traceable backtests and clean production-ready structure.</p>
+          <div class="tags">
+            <span class="tag neon">lean</span><span class="tag">backtests</span><span class="tag pink">logging</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>QC Options Framework Contribution</h3>
+          <p>Contributor to open-source production patterns for options strategies on QuantConnect (architecture, execution conventions, structure).</p>
+          <p>Outcome: reusable components and idioms for strategy implementation in Lean.</p>
+          <div class="tags">
+            <span class="tag neon">open-source</span><span class="tag">options</span><span class="tag pink">architecture</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Polygon → PostgreSQL Options Data Platform</h3>
+          <p>Built collectors for contracts + snapshots with incremental updates, schema design, indexing, and reproducible research datasets.</p>
+          <p>Outcome: reliable historical store for feature engineering, IV studies, and dashboards.</p>
+          <div class="tags">
+            <span class="tag">polygon</span><span class="tag neon">postgres</span><span class="tag pink">pipelines</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Dash Options Dashboard + OI Heatmaps</h3>
+          <p>Created dashboards to explore option metrics per strike/expiry, with selection retention and performance-friendly queries.</p>
+          <p>Outcome: quick visual diagnostics for liquidity/positioning and strategy monitoring.</p>
+          <div class="tags">
+            <span class="tag">dash</span><span class="tag neon">visuals</span><span class="tag pink">oi</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Regime Detection & Signal Discovery</h3>
+          <p>Built research workflows for regime segmentation (direction/volatility/liquidity/tail-risk) with stability and sensitivity checks.</p>
+          <p>Outcome: improved robustness by filtering strategies by regime instead of optimizing to the past.</p>
+          <div class="tags">
+            <span class="tag neon">ml</span><span class="tag">regimes</span><span class="tag pink">oos</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Polymarket BTC 15m HFC Bots</h3>
+          <p>Built execution + research tooling for BTC 15-minute markets: rollover correctness, quote caching, MTM + settlement logic.</p>
+          <p>Outcome: structured paper/live loops for testing edge, sizing, and drawdown behavior.</p>
+          <div class="tags">
+            <span class="tag neon">polymarket</span><span class="tag">15m</span><span class="tag pink">automation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Orderbook Microstructure Feature Pipeline</h3>
+          <p>Implemented features such as OFI/OBI, spreads, arrival/cancel rates, absorption/replenishment, and liquidity shock metrics.</p>
+          <p>Outcome: better short-horizon diagnostics and signals for execution-aware strategies.</p>
+          <div class="tags">
+            <span class="tag">ofi/obi</span><span class="tag pink">liquidity</span><span class="tag neon">features</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>NautilusTrader Execution Infrastructure</h3>
+          <p>Used NautilusTrader for structured, event-driven execution depending on the use-case (vs faster custom scripts for iteration).</p>
+          <p>Outcome: more modular execution with cleaner separation of signals, execution, and monitoring.</p>
+          <div class="tags">
+            <span class="tag neon">nautilus</span><span class="tag">execution</span><span class="tag pink">ops</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Betfair HFT Trading Desk (2011–2014)</h3>
+          <p>Ran a quant venture in UK horse betting markets using high-frequency pre-live and in-play data and neural forecasting models.</p>
+          <p>Outcome: strong foundations in event-driven pricing, microstructure, and operational reliability.</p>
+          <div class="tags">
+            <span class="tag">betfair</span><span class="tag neon">hft</span><span class="tag pink">pricing</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Startup Ecosystem Intelligence (NLP + Forecasting)</h3>
+          <p>Built ML pipelines for forecasting and text classification using provider data plus survey/fundamental datasets.</p>
+          <p>Outcome: repeatable analytics workflows and stakeholder-ready insights for industry research products.</p>
+          <div class="tags">
+            <span class="tag">nlp</span><span class="tag neon">forecasting</span><span class="tag pink">pipelines</span>
+          </div>
+        </div>
+      </div>
 
       <div class="section">
-        <h3 style="margin-top:0;">What to include here</h3>
-        <p style="margin:0;color:var(--muted);">
-          6–10 bullets or mini-cards with: problem → approach → outcome → links (GitHub / writeup).
+        <h3 style="margin-top:0;">Public links</h3>
+        <p style="margin:0;color:var(--muted); line-height:1.55;">
+          QuantConnect Integration Partner:
+          <a href="https://www.quantconnect.com/integration-partners/" target="_blank" rel="noreferrer">quantconnect.com/integration-partners</a><br/>
+          QC Options Framework:
+          <a href="https://github.com/Chocksy/qc-options-framework" target="_blank" rel="noreferrer">github.com/Chocksy/qc-options-framework</a><br/>
+          GitHub:
+          <a href="https://github.com/ffahimi" target="_blank" rel="noreferrer">github.com/ffahimi</a>
         </p>
       </div>
 
       <div class="footer">
         <span><a href="/">← back</a></span>
-        <span>last updated: manual</span>
+        <span>Last updated: <span id="d"></span></span>
       </div>
     </div>
   </div>
+
+  <script>
+    // simple "today" stamp for the footer
+    const dt = new Date();
+    const pad = (n) => String(n).padStart(2, "0");
+    document.getElementById("d").textContent = `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())}`;
+  </script>
 </body>
 </html>
