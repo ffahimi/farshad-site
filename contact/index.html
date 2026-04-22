@@ -25,11 +25,48 @@
       <h2>Fastest: email. Also happy to connect on LinkedIn.</h2>
 
       <div class="section">
+        <h3 style="margin-top:0;">Send a message</h3>
         <p style="margin:0;color:var(--muted);">
-          Email: <a href="mailto:farshad.fahimi@gmail.com">farshad.fahimi@gmail.com</a><br/>
-          LinkedIn: <a href="https://www.linkedin.com/in/fafaimi" target="_blank" rel="noreferrer">linkedin.com/in/fafaimi</a><br/>
-          GitHub: <a href="https://github.com/ffahimi" target="_blank" rel="noreferrer">github.com/ffahimi</a>
+          This form goes directly to my inbox. No email address is shown publicly.
         </p>
+
+        <!-- 1) Create a Formspree form and replace FORM_ID below -->
+        <form class="form" action="https://formspree.io/f/FORM_ID" method="POST">
+          <div class="form-row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" placeholder="What’s this about?" />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <!-- Optional: honeypot field to reduce spam -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <!-- Optional: redirect after submit -->
+          <input type="hidden" name="_subject" value="New message from farshad-site" />
+          <input type="hidden" name="_format" value="plain" />
+
+          <button class="btn primary" type="submit">Send →</button>
+
+          <div class="notice">
+            You’ll get a confirmation after submitting. If you prefer, message me on
+            <a href="https://www.linkedin.com/in/fafaimi" target="_blank" rel="noreferrer">LinkedIn</a>.
+          </div>
+        </form>
       </div>
 
       <div class="footer">
